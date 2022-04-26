@@ -1,0 +1,58 @@
+Thumbtack Weekly Report:
+  slides:
+    thumbtack_summary:
+      title: "Thumbtack Summary"
+      columns:
+        - type: image
+          content: https://tableauspy.com/api/spy/NQYJ2tqTgkZWgRS5YtlohyPQzGqrAv?api_token=n4LJF5Mf1FWXD1CZfeELUSghN0EJ31pC4WyCHrGmZ5Ksg7VAc8ZkP1tk1jPt
+        - type: text
+          content: "TBD"
+    thumbtack_cac:
+      title: "Thumbtack CAC"
+      columns:
+        - type: image
+          content: https://tableauspy.com/api/spy/Pzw3rxkh6CuJiyrq8SUVOGY9ENuJ8f?api_token=n4LJF5Mf1FWXD1CZfeELUSghN0EJ31pC4WyCHrGmZ5Ksg7VAc8ZkP1tk1jPt
+        - type: text
+          content: "TBD"
+    thumbtack_summary_by_brand:
+      title: "Thumbtack Summary by Btand"
+      columns:
+        - type: image
+          content: https://tableauspy.com/api/spy/lu1VMdCRDc60RJefCFGDVJJxTLJcHd?api_token=n4LJF5Mf1FWXD1CZfeELUSghN0EJ31pC4WyCHrGmZ5Ksg7VAc8ZkP1tk1jPt
+        - type: text
+          content: "TBD"
+    thumbtack_summary_lawnstarter:
+      title: "Thumbtack Summary - LawnStarter"
+      columns:
+        - type: image
+          content: https://tableauspy.com/api/spy/yc2hE3PnulU32KGMWuXZVqhQOzNOfA?api_token=n4LJF5Mf1FWXD1CZfeELUSghN0EJ31pC4WyCHrGmZ5Ksg7VAc8ZkP1tk1jPt
+        - type: text
+          content: "TBD"
+    thumbtack_reviews_lawnstarter:
+      title: "Thumbtack Reviews - LawnStarter"
+      columns:
+        - type: image
+          content: https://tableauspy.com/api/spy/4Rs0JVMWlEJyu56CL1VPJJ2UBEvQhV?api_token=n4LJF5Mf1FWXD1CZfeELUSghN0EJ31pC4WyCHrGmZ5Ksg7VAc8ZkP1tk1jPt
+        - type: text
+          content: "TBD"
+    thumbtack_summary_lawnlove:
+      title: "Thumbtack Summary - Lawn Love"
+      columns:
+        - type: image
+          content: https://tableauspy.com/api/spy/yjvAVIJFhAln1esG634qopMzRiVtaw?api_token=n4LJF5Mf1FWXD1CZfeELUSghN0EJ31pC4WyCHrGmZ5Ksg7VAc8ZkP1tk1jPt
+        - type: text
+          content: "TBD"
+    thumbtack_reviews_lawnlove:
+      title: "Thumbtack Reviews - Lawn Love"
+      columns:
+        - type: image
+          content: https://tableauspy.com/api/spy/HsCoAfsd6feKsjZKWUKjhrwVoEThBU?api_token=n4LJF5Mf1FWXD1CZfeELUSghN0EJ31pC4WyCHrGmZ5Ksg7VAc8ZkP1tk1jPt
+        - type: text
+          content: "TBD"
+    thumbtack_enabled_zips:
+      title: "Thumbtack Enabled Zips"
+      columns:
+        - type: image
+          content: https://tableauspy.com/api/spy/FLTGS9gPuIT6z11ATrfXz8fpLQFzmw?api_token=n4LJF5Mf1FWXD1CZfeELUSghN0EJ31pC4WyCHrGmZ5Ksg7VAc8ZkP1tk1jPt
+        - type: text
+          content: "TBD"
