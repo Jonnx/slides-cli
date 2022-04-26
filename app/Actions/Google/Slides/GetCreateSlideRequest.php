@@ -50,14 +50,23 @@ class GetCreateSlideRequest
             ],
         ]);
 
+        // source
+        $source = data_get($slideDefinition, 'source', null);
+
         // process columns
         $columnData = data_get($slideDefinition, 'columns', []);
         $this->columnCount = count($columnData);
         $this->columnWidth = (self::SLIDE_WIDTH - (2 * self::COLUMN_SPACING) - (($this->columnCount - 1) * self::COLUMN_SPACING)) / $this->columnCount;
-        $this->columnHeight = 300;
+        $this->columnHeight = $source ? 280 : 300;
 
+        // add columns
         foreach ($columnData as $columnIndex => $column) {
             $this->processColumn($columnIndex, $column);
+        }
+
+        // add source
+        if ($source) {
+            $this->processSource($source);
         }
 
         return $this->requests;
@@ -137,5 +146,62 @@ class GetCreateSlideRequest
                 'text' => data_get($column, 'content'),
             ],
         ]);
+    }
+
+    protected function processSource($source)
+    {
+        // CREATE TEXT BOX
+        $objectId = $this->pageId . '_source';
+        $this->requests[] = new \Google_Service_Slides_Request([
+            'createShape' => [
+                'objectId' => $objectId,
+                'shapeType' => 'TEXT_BOX',
+                'elementProperties' => [
+                    'pageObjectId' => $this->pageId,
+                    'size' => [
+                        'width' => [
+                            'magnitude' =>  self::SLIDE_WIDTH - 2 * $this->columnSpacing,
+                            'unit' => 'PT',
+                        ],
+                        'height' => [
+                            'magnitude' => 20,
+                            'unit' => 'PT',
+                        ],
+                    ],
+                    'transform' => [
+                        'scaleX' => 1,
+                        'scaleY' => 1,
+                        'translateX' => self::COLUMN_SPACING,
+                        'translateY' => 75 + $this->columnHeight,
+                        'unit' => 'PT',
+                    ],
+                ],
+            ],
+        ]);
+
+        // ADD TEXT
+        $this->requests[] = new \Google_Service_Slides_Request([
+            'insertText' => [
+                'objectId' => $objectId,
+                'text' => 'Source: ' . $source,
+            ],
+        ]);
+
+        // STYLE TEXT
+        $this->requests[] = new \Google_Service_Slides_Request(array(
+            'updateTextStyle' => array(
+                'objectId' => $objectId,
+                'textRange' => array(
+                    'type' => 'ALL',
+                ),
+                'style' => array(
+                    'fontSize' => array(
+                        'magnitude' => 7,
+                        'unit' => 'PT'
+                    ),
+                ),
+                'fields' => 'fontSize'
+            )
+        ));
     }
 }
