@@ -1,24 +1,24 @@
 {
-    "name": "laravel-zero/laravel-zero",
-    "description": "The Laravel Zero Framework.",
+    "name": "jonnx/slides-cli",
+    "description": "A cli designed to steamline the creation of recurring reports & slides.",
     "keywords": [
-        "framework",
-        "laravel",
-        "laravel zero",
+        "google slides",
+        "generator",
+        "reporting",
         "console",
         "cli"
     ],
-    "homepage": "https://laravel-zero.com",
+    "homepage": "https://github.com/Jonnx/slides-cli",
     "type": "project",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/laravel-zero/laravel-zero/issues",
-        "source": "https://github.com/laravel-zero/laravel-zero"
+        "issues": "https://github.com/Jonnx/slides-cli/issues",
+        "source": "https://github.com/Jonnx/slides-cli"
     },
     "authors": [
         {
-            "name": "Nuno Maduro",
-            "email": "enunomaduro@gmail.com"
+            "name": "Jonas Weigert",
+            "email": "weigert.jonas@gmail.com"
         }
     ],
     "require": {
