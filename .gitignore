@@ -5,3 +5,4 @@
 /builds/slides
 .phpunit.result.cache
 .env
+*.yml
