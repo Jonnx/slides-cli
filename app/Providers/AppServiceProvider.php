@@ -3,18 +3,18 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use \Google\Client as GoogleClient;
+use Google\Client as GoogleClient;
 use Google\Service\Oauth2;
 use Google\Service\Slides;
 
 class AppServiceProvider extends ServiceProvider
 {
-    const GOOGLE_SCOPES = [
+    public const GOOGLE_SCOPES = [
         Oauth2::USERINFO_PROFILE,
         Oauth2::USERINFO_EMAIL,
         Slides::DRIVE_FILE,
     ];
-    const GOOGLE_REDIRECT = 'urn:ietf:wg:oauth:2.0:oob';
+    public const GOOGLE_REDIRECT = 'https://clioauth.com';
 
     /**
      * Bootstrap any application services.
